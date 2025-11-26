@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta
+            name="description"
+            content="itas bathtub race">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bathtub Race Signup</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="header-container">
+        <h1>Bathtub Race Registration</h1>
+        <p>
+            rubbing your way to the finish line
+        </p>
+        </div>
+
+        <div class="page-container">
+            <!-- Form section (3/4 width) -->
+            <div class="form-section card">
+                <!-- Your existing form -->
+                <form method="POST" action="https://form-submit-weld.vercel.app/api/process-form">
+                    <!-- Select Event -->
+                    <label>Select Event *</label>
+                        <div class="radio-group">
+                          <label><input type="radio" name="event" value="Stock" required> Stock</label>
+                          <label><input type="radio" name="event" value="Modified" required> Modified</label>
+                        </div>
+
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+
+                        <label for="country">Country</label>
+                        <input type="text" id="country" name="country">
+
+                        <label for="province">Province</label>
+                        <select id="province" name="province">
+                            <option value="">Select Province</option>
+                            <option>BC</option>
+                            <option>AB</option>
+                            <option>SK</option>
+                            <option>MB</option>
+                            <option>ON</option>
+                            <option>QC</option>
+                        </select>
+
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city">
+
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address">
+
+                        <label for="postal">Postal Code</label>
+                        <input type="text" id="postal" name="postal">
+
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="dob">Date of Birth *</label>
+                        <input type="date" id="dob" name="dob" required>
+
+                        <label for="boat">Boat Name</label>
+                        <input type="text" id="boat" name="boat">
+
+                        <label for="comments">Comments</label>
+                        <textarea id="comments" name="comments" cols="40" rows="3"></textarea>
+
+                        <label for="waiver">Waiver Agreement *</label>
+                        <input type="checkbox" id="waiver" name="waiver" required>
+
+                    <!-- Submit Button -->
+                    <div class="full-row submit-row">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+    
+            <!-- Image section (1/4 width) -->
+            <div class="image-section">
+                <img src="teach.png" alt="showing_off">
+            </div>
+        </div>
+    </body>
+</html>
